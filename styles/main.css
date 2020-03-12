@@ -18,8 +18,15 @@ textarea {
   margin: 0;
   padding: 0;
   font-family: Roboto, sans-serif;
-  font-size: 16px;
-  line-height: 1.5; }
+  font-size: 16px; }
+
+strong {
+  font-weight: 700; }
+
+a {
+  color: #0075ff;
+  text-decoration: none;
+  font-weight: 700; }
 
 .container {
   position: relative;
@@ -108,11 +115,13 @@ textarea {
     letter-spacing: 2px; }
   .nav-mobile__item--phone, .nav-mobile__item--action {
     list-style: none;
-    position: relative; }
+    position: relative;
+    margin: 10px 0 0; }
+  .nav-mobile__item--phone {
+    margin-top: 40px; }
   .nav-mobile__link--action, .nav-mobile__link--phone {
     color: white;
     text-decoration: none;
-    margin: 16px 0 0;
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase; }
@@ -184,7 +193,8 @@ textarea {
     line-height: 60px;
     position: absolute;
     bottom: 165px;
-    font-weight: 600; }
+    font-weight: 600;
+    width: 328px; }
     .header__title::before {
       content: "";
       position: absolute;
@@ -218,11 +228,137 @@ textarea {
       visibility: visible;
       margin: 15px 23px; }
     .header__title {
-      margin: 0 20px;
-      bottom: 80px; }
+      bottom: 80px;
+      width: 253px;
+      font-size: 46px;
+      line-height: 40px; }
+    .header__title--small-screen {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
   .nav,
   .header__phone,
   .header__action {
     display: none; } }
+
+.section {
+  padding: 70px 0;
+  max-width: 1260px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%; }
+  .section__heading {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: -30px; }
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .info__heading {
+    width: 328px;
+    margin-right: 300px;
+    font-size: 48px;
+    letter-spacing: -1.5px;
+    line-height: 48px; }
+  .info__text {
+    width: 500px; }
+    .info__text > p {
+      font-size: 16px;
+      line-height: 27px;
+      margin-bottom: 40px; }
+    .info__text > p:first-child {
+      margin-bottom: 0; }
+  .info__text-title {
+    font-size: 24px;
+    line-height: 30px; }
+
+@media screen and (max-width: 1200px) {
+  .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .info__heading {
+      width: 240px;
+      margin: 0;
+      font-size: 36px;
+      line-height: 36px; }
+    .info__text {
+      width: 240px; } }
+
+.heading {
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 600;
+  position: absolute; }
+  .heading__crown {
+    background-image: url("../images/crown.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 23px;
+    height: 16px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: auto; }
+
+.photos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .photos__img {
+    width: calc(50% - 10px);
+    height: 260px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    border-radius: 8px; }
+  .photos--wide-right .photos__img:first-child {
+    width: calc(33% - 10px); }
+  .photos--wide-right .photos__img:last-child {
+    width: calc(67% - 10px); }
+  .photos--wide-left .photos__img:first-child {
+    width: calc(67% - 10px); }
+  .photos--wide-left .photos__img:last-child {
+    width: calc(33% - 10px); }
+
+.gallery > p {
+  margin: 24px 0 40px; }
+
+.gallery__button {
+  padding: 21px 65px;
+  background-color: white;
+  border: 2px solid #0075ff;
+  color: #0075ff;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  .gallery__button:hover {
+    background-color: #0075ff;
+    color: white; }
+
+.gallery__button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 /*# sourceMappingURL=main.css.map */
