@@ -44,7 +44,7 @@ a {
   z-index: 2; }
 
 .phone-icon {
-  visibility: hidden;
+  display: none;
   width: 18px;
   height: 18px;
   background-image: url("../images/phone.svg");
@@ -53,7 +53,7 @@ a {
   background-position: center; }
 
 .hamburger-icon {
-  visibility: hidden;
+  display: none;
   width: 18px;
   height: 18px;
   background-image: url("../images/hamburger.svg");
@@ -62,7 +62,7 @@ a {
   background-position: center; }
 
 .x-icon {
-  visibility: hidden;
+  display: none;
   width: 18px;
   height: 18px;
   background-image: url("../images/x.svg");
@@ -99,6 +99,9 @@ a {
     text-decoration: none;
     -webkit-transition: color 0.2s;
     transition: color 0.2s; }
+    .nav__link:focus {
+      outline: 2px solid white;
+      outline-offset: 3px; }
     .nav__link:hover {
       color: #9fadc2; }
 
@@ -171,7 +174,14 @@ a {
     font-size: 12px; }
     .header__phone--link {
       color: white;
-      text-decoration: none; }
+      text-decoration: none;
+      -webkit-transition: color 0.2s;
+      transition: color 0.2s; }
+      .header__phone--link:focus {
+        outline: 2px solid white;
+        outline-offset: 3px; }
+      .header__phone--link:hover {
+        color: #9fadc2; }
   .header__action {
     margin-top: 32px;
     font-size: 12px;
@@ -184,6 +194,9 @@ a {
     border-bottom: 1px solid;
     -webkit-transition: color 0.2s;
     transition: color 0.2s; }
+    .header__link:focus {
+      outline: 2px solid white;
+      outline-offset: 3px; }
     .header__link:hover {
       color: #9fadc2; }
   .header__title {
@@ -205,7 +218,7 @@ a {
       border: 2px;
       background-color: #fff; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1299px) {
   .header {
     height: 568px; }
     .header__x-icon {
@@ -216,7 +229,7 @@ a {
     .header__menu--toggle:checked ~ .header__nav-mobile--container {
       visibility: visible; }
     .header__menu--toggle:checked ~ .header__x-icon {
-      visibility: visible; }
+      display: block; }
     .header__top {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
@@ -225,7 +238,7 @@ a {
       width: 73px;
       height: 48px; }
     .header__phone-icon, .header__hamburger-icon {
-      visibility: visible;
+      display: block;
       margin: 15px 23px; }
     .header__title {
       bottom: 80px;
@@ -266,7 +279,7 @@ a {
     font-size: 24px;
     line-height: 30px; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1299px) {
   .info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -325,7 +338,7 @@ a {
   .photos--wide-left .photos__img:last-child {
     width: calc(33% - 10px); }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1299px) {
   .photos {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -346,6 +359,10 @@ a {
 .gallery > p {
   margin: 24px 0 40px; }
 
+.gallery__link:focus {
+  outline: 2px solid #4f5aff;
+  outline-offset: 1px; }
+
 .gallery__button {
   padding: 21px 65px;
   background-color: white;
@@ -354,8 +371,11 @@ a {
   border-radius: 8px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: 0.2s;
-  transition: 0.2s; }
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s; }
+  .gallery__button:focus {
+    outline: 2px solid #4f5aff;
+    outline-offset: 3px; }
   .gallery__button:hover {
     background-color: #0075ff;
     color: white;
@@ -369,7 +389,7 @@ a {
       -ms-flex-pack: center;
           justify-content: center; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1299px) {
   .gallery > p {
     text-align: center; }
   .gallery__button {
@@ -388,7 +408,7 @@ a {
     position: absolute;
     top: -30px; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1299px) {
   .section__heading {
     font-size: 36px;
     line-height: 36px; } }
@@ -415,6 +435,9 @@ a {
     width: 413px;
     height: 56px;
     color: white; }
+    .consultation__button:focus {
+      outline: 2px solid #4f5aff;
+      outline-offset: 1px; }
     .consultation__button:hover {
       background-color: white;
       color: #0075ff;
@@ -423,7 +446,7 @@ a {
               box-shadow: 0 13px 27px rgba(0, 83, 181, 0.46);
       cursor: pointer; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1299px) {
   .consultation {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -446,13 +469,15 @@ a {
       -ms-flex-direction: column;
           flex-direction: column; }
   .form__input {
-    width: 413px;
+    width: 396px;
     height: 48px;
     background-color: #f7f8ff;
     border: 1px solid #fff;
     border-radius: 8px;
     margin-bottom: 16px;
     padding-left: 17px; }
+    .form__input:focus {
+      outline: 2px solid #4f5aff; }
     .form__input::-webkit-input-placeholder {
       font-size: 14px;
       color: #b9c1ce; }
@@ -473,9 +498,9 @@ a {
     height: 144px;
     resize: none; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1299px) {
   .form__input {
-    width: 280px; } }
+    width: 263px; } }
 
 .testimonials {
   display: -webkit-box;
@@ -500,7 +525,7 @@ a {
     margin: 0 auto 48px;
     color: #3e3e3e; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1299px) {
   .testimonials {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -517,7 +542,7 @@ a {
     height: 153px;
     border-radius: 50%; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1299px) {
   .profile {
     width: 280px; } }
 
@@ -525,21 +550,27 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .contacts__phone-email, .contacts__address, .contacts__your-contacts {
+  .contacts__phone-email, .contacts__your-contacts {
     margin-right: 108px; }
-  .contacts__address {
-    margin-right: 394px; }
+  .contacts__address-text {
+    margin-right: 520px; }
   .contacts__phone-title, .contacts__email-title, .contacts__address-title {
     color: #9fadc2;
     font-size: 14px;
     line-height: 27px;
     margin-bottom: 8px; }
-  .contacts__phone, .contacts__email, .contacts__address {
+  .contacts__phone, .contacts__email, .contacts__address-text {
     width: 152px;
     margin-top: 0;
     color: #3e3e3e;
     font-size: 16px;
-    line-height: 27px; }
+    line-height: 27px;
+    font-weight: normal; }
+    .contacts__phone:focus, .contacts__email:focus, .contacts__address-text:focus {
+      outline: 2px solid #4f5aff;
+      outline-offset: 1px; }
+    .contacts__phone:hover, .contacts__email:hover, .contacts__address-text:hover {
+      text-decoration: underline; }
   .contacts__button {
     margin-top: 16px;
     background-color: #0075ff;
@@ -550,6 +581,9 @@ a {
     width: 413px;
     height: 56px;
     color: white; }
+    .contacts__button:focus {
+      outline: 2px solid #4f5aff;
+      outline-offset: 1px; }
     .contacts__button:hover {
       background-color: white;
       color: #0075ff;
@@ -558,7 +592,7 @@ a {
               box-shadow: 0 13px 27px rgba(0, 83, 181, 0.46);
       cursor: pointer; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1299px) {
   .contacts {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -572,7 +606,9 @@ a {
     .contacts__your-contacts {
       margin-right: 0; }
     .contacts__phone-email, .contacts__address {
-      margin-right: 145px; } }
+      margin-right: 145px; }
+    .contacts__address {
+      width: 133.89px; } }
 
 .footer {
   background-image: url("../images/footer.png");
@@ -592,7 +628,7 @@ a {
     position: absolute;
     bottom: 40px; }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1299px) {
   .footer {
     height: 206px; }
     .footer__logo {
