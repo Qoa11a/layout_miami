@@ -605,7 +605,7 @@ a {
       width: 280px; }
     .contacts__your-contacts {
       margin-right: 0; }
-    .contacts__phone-email, .contacts__address {
+    .contacts__phone-email, .contacts__address, .contacts__address-text {
       margin-right: 145px; }
     .contacts__address {
       width: 133.89px; } }
